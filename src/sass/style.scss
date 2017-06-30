@@ -1,0 +1,326 @@
+@import 'toolkit/reset';
+@import 'ibm-colors';
+@font-face {
+  font-family: 'Bebopslabface';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../images/BebopSlabFace-Regular.otf') format('opentype');
+}
+
+$default-bg-color: #fff;
+$box-shadow-color: rgba(0, 0, 0, .1);
+$main-blue: #2240fd;
+$gray-text: #4d5583;
+$black: #000;
+$off-white: #e9e9f1;
+$reminder-pink: #fc5e9a;
+$reminder-shadow: rgba(252, 94, 154, .3);
+$text-color: #333;
+$nav-background: #ddd;
+$default-border-color: #ccc;
+$button-color: #7c7ca3;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $off-white;
+  color: $text-color;
+  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+h2 {
+  color: $main-blue;
+  font-family: Bebopslabface, Arial, sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 30px;
+  margin-bottom: 17px;
+  text-align: center;
+}
+
+section {
+  height: 25vh;
+  margin-left: 0;
+  margin-top: 54px;
+  padding-top: 0;
+}
+
+.w-nav {
+  position: relative;
+  z-index: 1000;
+
+  &::before,
+  &::after {
+    content: ' ';
+    display: table;
+  }
+}
+
+.navbar {
+  background-color: $main-blue;
+  left: 0;
+  margin-top: 0;
+  padding-bottom: 14px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1;
+}
+
+.brand-logo {
+  display: block;
+  margin-top: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.alert {
+  margin-top: 0;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  left: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 11px;
+  position: relative;
+  width: 90%;
+}
+
+.search-flex {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  padding-top: 40px;
+}
+
+.search-nav {
+  height: 130px;
+  padding-top: 30px;
+}
+
+.w-input {
+  background-color: $default-bg-color;
+  border: 1px solid $default-border-color;
+  color: $text-color;
+  display: block;
+  font-size: 14px;
+  height: 38px;
+  line-height: 1.428571429;
+  margin-bottom: 10px;
+  padding: 8px 12px;
+  width: 100%;
+}
+
+.search-wrapper {
+  margin: 0 30%;
+  width: 40%;
+}
+
+.search-field {
+  background-color: transparent;
+  border: 1px solid $default-border-color;
+  border-bottom: 2px solid $main-blue;
+  color: $text-color;
+  display: inline-block;
+  flex: 1;
+  font-size: 32px;
+  height: 38px;
+  line-height: 40px;
+  margin-bottom: 10px;
+  margin-right: 2%;
+  margin-top: 15px;
+  padding: 8px 12px;
+  padding-bottom: 0;
+  padding-top: 0;
+  width: 70%;
+}
+
+.search-buttons {
+  display: inline-block;
+  width: 152px;
+}
+
+.button {
+  background-color: $button-color;
+  border: 0;
+  border-radius: 5px;
+  box-shadow: none;
+  color: $default-bg-color;
+  height: 30px;
+  text-align: center;
+  width: 64px;
+
+  &.button--map {
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-left: 1px;
+  }
+
+  &.button--list {
+    background-color: $main-blue;
+  }
+}
+
+.result-card {
+  background-color: $default-bg-color;
+  border-radius: 5px;
+  box-shadow: 0 0 43px 9px $box-shadow-color;
+  display: inline-block;
+  height: 400px;
+  justify-content: center;
+  margin: 8px;
+  overflow: hidden;
+  position: static;
+  text-align: left;
+  width: 275px;
+}
+
+.card-img {
+  height: 144px;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding-bottom: 0;
+  padding-top: 0;
+  width: 294px;
+}
+
+.heading {
+  color: $main-blue;
+  font-family: Montserrat, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+
+  &.class-title {
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-top: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 154px;
+  }
+
+  &.class-time {
+    margin-right: 0;
+  }
+}
+
+.card-flex {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  &.bottom {
+    border-bottom: 1px solid $black;
+  }
+}
+
+.class-time {
+  color: $main-blue;
+  font-family: Montserrat, sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  margin-right: 15px;
+}
+
+.heading-2 {
+  color: $gray-text;
+  font-family: Montserrat, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  margin-bottom: 10px;
+  margin-top: 0;
+
+  &.gym {
+    margin-bottom: 0;
+  }
+
+  &.duration {
+    margin-bottom: 0;
+  }
+
+  &.address {
+    font-weight: 300;
+  }
+}
+
+.card-detail {
+  margin-top: 10px;
+}
+
+.card-map-button {
+  background-color: $off-white;
+  border-radius: 5px;
+  color: $main-blue;
+  height: 24px;
+  padding: 2px 0 0;
+  text-align: center;
+  text-decoration: none;
+  width: 55px;
+}
+
+.divider {
+  border-top: 1px solid $off-white;
+  display: block;
+  justify-content: center;
+  margin-left: 15px;
+  margin-right: 15px;
+  width: auto;
+}
+
+.class-description {
+  color: $gray-text;
+  font-family: Montserrat, sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  height: 100px;
+  margin-top: 10px;
+  overflow: hidden;
+  padding-left: 15px;
+  padding-right: 15px;
+  text-overflow: ellipsis;
+}
+
+.reminder {
+  background-color: $reminder-pink;
+  border-radius: 5px;
+  box-shadow: 0 0 19px 3px $reminder-shadow;
+  color: $default-bg-color;
+  display: block;
+  font-family: Montserrat, sans-serif;
+  font-weight: 400;
+  height: 30px;
+  justify-content: center;
+  margin-top: 8px;
+  padding-bottom: 0;
+  padding-top: 5px;
+  text-align: center;
+  text-decoration: none;
+  width: 190px;
+}
+
+.card-button-flex {
+  display: flex;
+  justify-content: center;
+}
+
+.class-map {
+  display: none;
+}
+
+.class-list {
+  display: block;
+  text-align: center;
+}

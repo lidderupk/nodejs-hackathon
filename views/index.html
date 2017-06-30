@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>STAYFIT</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/app.js"></script>
+  <script src="/js/mapping.js"></script>
+  <script src="/js/cards.js"></script>
+</head>
+<body>
+  <header class="navbar w-nav">
+    <div class="nav-container">
+      <img class="brand-logo" src="images/Brand-Logo.svg"><img class="alert" src="images/Alert-Bell.svg">
+    </div>
+  </header>
+  <main>
+
+    <section class="search-nav">
+      <h2>Find a workout near</h2>
+      <div class="search-wrapper">
+        <input class="search-field" data-name="Zipcode" id="Zipcode" maxlength="256" name="Zipcode" placeholder="Enter Your Zipcode" type="text">
+        <nav class="search-buttons">
+          <input type="button" value="Map" class="button button--map"></input>
+          <input type="button" value="List" class="button button--list"></input>
+        </nav>
+      </div>
+    </section>
+
+    <section class="class-map">
+    </section>
+
+    <section class="class-list">
+    </section>
+
+
+  </main>
+</body>
+</html>
